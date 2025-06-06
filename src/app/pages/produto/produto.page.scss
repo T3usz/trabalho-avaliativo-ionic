@@ -1,0 +1,46 @@
+.produto-container {
+  padding: 16px;
+}
+
+.produto-imagem {
+  text-align: center;
+  margin-bottom: 16px;
+  
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+.precos {
+  margin: 16px 0;
+  
+  .preco-normal {
+    color: #6c757d;
+    font-size: 1em;
+    margin: 4px 0;
+  }
+  
+  .preco-desconto {
+    color: #28a745;
+    font-size: 1.3em;
+    margin: 4px 0;
+  }
+}
+
+.detalhes {
+  margin: 20px 0;
+  
+  h3 {
+    color: #495057;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    line-height: 1.5;
+    color: #6c757d;
+  }
+}

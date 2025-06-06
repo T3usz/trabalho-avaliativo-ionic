@@ -1,0 +1,24 @@
+ion-content {
+  --background: #f8f9fa;
+}
+
+.preco-normal {
+  color: #6c757d;
+  font-size: 0.9em;
+  margin: 4px 0;
+}
+
+.preco-desconto {
+  color: #28a745;
+  font-size: 1.1em;
+  margin: 4px 0;
+}
+
+ion-thumbnail {
+  border-radius: 8px;
+}
+
+ion-item {
+  margin-bottom: 8px;
+  border-radius: 8px;
+}

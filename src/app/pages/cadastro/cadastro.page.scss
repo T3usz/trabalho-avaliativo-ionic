@@ -1,0 +1,39 @@
+ion-content {
+  --background: #f8f9fa;
+}
+
+ion-list {
+  background: transparent;
+  padding: 16px;
+}
+
+ion-item {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  --background: white;
+  --color: #000000; // Cor do texto digitado
+  --placeholder-color: #666666; // Cor do placeholder
+  --placeholder-opacity: 1; // Garante que o placeholder seja visível
+}
+
+// Configuração específica para os inputs
+ion-input {
+  --placeholder-color: #666666 !important;
+  --placeholder-opacity: 1 !important;
+  --color: #000000; // Cor do texto
+}
+
+// Para labels se necessário
+ion-label {
+  --color: #333333;
+}
+
+.ion-padding {
+  padding-top: 20px;
+}
+
+// Opcional: Para melhorar a aparência visual
+ion-button {
+  margin-top: 16px;
+  --border-radius: 8px;
+}

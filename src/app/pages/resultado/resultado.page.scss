@@ -1,0 +1,41 @@
+.sucesso-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.icone-sucesso {
+  margin-bottom: 20px;
+  
+  ion-icon {
+    font-size: 100px;
+  }
+}
+
+h1 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #6c757d;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.resumo-final {
+  margin: 20px 0;
+  
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  ion-note {
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+
+.botoes-acao {
+  margin-top: 20px;
+}

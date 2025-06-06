@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/conta"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ isEdicao ? 'Editar Dados' : 'Cadastro de Cliente' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="salvarDados()" #clienteForm="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nome *</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.nome" 
+          name="nome" 
+          required 
+          placeholder="Digite seu nome completo">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email *</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.email" 
+          name="email" 
+          type="email"
+          required 
+          placeholder="Digite seu email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Telefone *</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.telefone" 
+          name="telefone" 
+          required 
+          placeholder="(00) 00000-0000">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Endereço</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.endereco" 
+          name="endereco" 
+          placeholder="Digite seu endereço">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">CEP</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.cep" 
+          name="cep" 
+          placeholder="00000-000">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Cidade</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.cidade" 
+          name="cidade" 
+          placeholder="Digite sua cidade">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Bairro</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.bairro" 
+          name="bairro" 
+          placeholder="Digite seu bairro">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Estado</ion-label>
+        <ion-input 
+          [(ngModel)]="cliente.estado" 
+          name="estado" 
+          placeholder="Digite seu estado">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button 
+        expand="block" 
+        type="submit" 
+        color="success">
+        <ion-icon name="save" slot="start"></ion-icon>
+        {{ isEdicao ? 'Salvar Alterações' : 'Cadastrar Cliente' }}
+      </ion-button>
+
+      <ion-button 
+        expand="block" 
+        fill="outline" 
+        color="medium"
+        (click)="voltarParaConta()">
+        Cancelar
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

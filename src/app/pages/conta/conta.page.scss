@@ -1,0 +1,37 @@
+.container {
+  padding: 20px;
+}
+
+.sem-cliente {
+  text-align: center;
+  padding: 40px 20px;
+  
+  .icone-grande {
+    font-size: 80px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #6c757d;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+}
+
+.com-cliente {
+  .icone-perfil {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  ion-item {
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,53 @@
+<!-- produto.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button defaultHref="/tabs/inicio"></ion-back-button>
+      
+
+    </ion-buttons>
+    <ion-title>Detalhes do Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="produto" class="produto-container">
+    <div class="produto-imagem">
+      <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=PRODUTO" alt="Produto">
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ produto.descricao }}</ion-card-title>
+        <ion-card-subtitle>Código: {{ produto.codigo }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="precos">
+          <p class="preco-normal">De: <s>R$ {{ produto.valorNormal | number:'1.2-2' }}</s></p>
+          <p class="preco-desconto">Por: <strong>R$ {{ produto.valorComDesconto | number:'1.2-2' }}</strong></p>
+        </div>
+
+        <div class="detalhes">
+          <h3>Detalhes:</h3>
+          <p>{{ produto.detalhes }}</p>
+        </div>
+
+        <ion-button expand="block" color="success" (click)="comprarProduto()">
+          <ion-icon name="cart" slot="start"></ion-icon>
+          Comprar Produto
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <div *ngIf="!produto" class="produto-nao-encontrado">
+    <h2>Produto não encontrado</h2>
+    <ion-button expand="block" fill="outline" (click)="voltarParaInicio()">
+      <ion-icon name="home" slot="start"></ion-icon>
+      Voltar para Início
+    </ion-button>
+  </div>
+</ion-content>

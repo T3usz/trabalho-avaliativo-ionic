@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Compra Realizada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="sucesso-container">
+    <div class="icone-sucesso">
+      <ion-icon name="checkmark-circle" color="success"></ion-icon>
+    </div>
+    
+    <h1>Compra Realizada com Sucesso!</h1>
+    <p>Obrigado pela sua compra. Seus produtos serão entregues em breve.</p>
+    
+    <ion-card class="resumo-final">
+      <ion-card-header>
+        <ion-card-title>Resumo do Pedido</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              <h3>Valor dos produtos</h3>
+            </ion-label>
+            <ion-note slot="end">R$ {{ valorProdutos | number:'1.2-2' }}</ion-note>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>
+              <h3>Frete</h3>
+            </ion-label>
+            <ion-note slot="end">R$ {{ frete | number:'1.2-2' }}</ion-note>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>
+              <h2><strong>Total pago</strong></h2>
+            </ion-label>
+            <ion-note slot="end" color="success">
+              <strong>R$ {{ totalPago | number:'1.2-2' }}</strong>
+            </ion-note>
+          </ion-item>
+        </ion-list>
+        
+        <div class="botoes-acao">
+          <ion-button expand="block" color="primary" (click)="voltarInicio()">
+            <ion-icon name="home" slot="start"></ion-icon>
+            Voltar para Início
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
